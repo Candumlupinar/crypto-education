@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KriptoPara Akademi - Borsa ve Kripto Para Eğitimleri</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>KriptoPara Akademi</h1>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#egitimler">Eğitimler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#basari-hikayeleri">Başarı Hikayeleri</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="anasayfa" class="hero">
+        <div class="hero-content">
+            <h1>Kripto Para ve Borsa Dünyasına Hoş Geldiniz</h1>
+            <p>Profesyonel eğitmenlerimizle birlikte finans dünyasında başarıya ulaşın</p>
+            <a href="#egitimler" class="cta-button">Eğitimleri Keşfet</a>
+        </div>
+    </section>
+
+    <section id="egitimler" class="courses">
+        <h2>Popüler Eğitimlerimiz</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040" alt="Kripto Para Temelleri">
+                <div class="course-info">
+                    <h3>Kripto Para Temelleri</h3>
+                    <p>Kripto para dünyasına giriş yapın ve temel kavramları öğrenin</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 8 Hafta</span>
+                        <span><i class="fas fa-users"></i> 500+ Öğrenci</span>
+                    </div>
+                    <div class="course-price">
+                        <span class="price">₺1,999</span>
+                        <a href="#" class="button">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Teknik Analiz">
+                <div class="course-info">
+                    <h3>Teknik Analiz</h3>
+                    <p>Grafik okuma ve teknik analiz stratejilerini öğrenin</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 6 Hafta</span>
+                        <span><i class="fas fa-users"></i> 300+ Öğrenci</span>
+                    </div>
+                    <div class="course-price">
+                        <span class="price">₺2,499</span>
+                        <a href="#" class="button">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3" alt="Borsa Yatırımı">
+                <div class="course-info">
+                    <h3>Borsa Yatırımı</h3>
+                    <p>Borsa dünyasında başarılı yatırımlar yapmanın yollarını keşfedin</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 10 Hafta</span>
+                        <span><i class="fas fa-users"></i> 400+ Öğrenci</span>
+                    </div>
+                    <div class="course-price">
+                        <span class="price">₺2,999</span>
+                        <a href="#" class="button">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kripto-fiyatlari" class="crypto-prices">
+        <div class="crypto-header">
+            <h2>Canlı Kripto Para Fiyatları</h2>
+            <div class="market-info">
+                <div class="market-stat">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Toplam Piyasa Değeri: <span id="total-market-cap">$0.00</span></span>
+                </div>
+                <div class="market-stat">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>24s Hacim: <span id="total-volume">$0.00</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="price-ticker">
+            <div class="ticker-item">
+                <div class="coin-header">
+                    <img src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png" alt="Bitcoin">
+                    <div class="coin-info">
+                        <span class="coin-name">Bitcoin</span>
+                        <span class="coin-symbol">BTC</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-main">
+                        <span class="coin-price" id="btc-price">Yükleniyor...</span>
+                        <span class="price-change" id="btc-change">%0.00</span>
+                    </div>
+                    <div class="price-details">
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Yüksek</span>
+                            <span class="detail-value" id="btc-high">$0.00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Düşük</span>
+                            <span class="detail-value" id="btc-low">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="coin-header">
+                    <img src="https://assets.coingecko.com/coins/images/279/large/ethereum.png" alt="Ethereum">
+                    <div class="coin-info">
+                        <span class="coin-name">Ethereum</span>
+                        <span class="coin-symbol">ETH</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-main">
+                        <span class="coin-price" id="eth-price">Yükleniyor...</span>
+                        <span class="price-change" id="eth-change">%0.00</span>
+                    </div>
+                    <div class="price-details">
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Yüksek</span>
+                            <span class="detail-value" id="eth-high">$0.00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Düşük</span>
+                            <span class="detail-value" id="eth-low">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="coin-header">
+                    <img src="https://assets.coingecko.com/coins/images/825/large/bnb-icon2_2x.png" alt="Binance Coin">
+                    <div class="coin-info">
+                        <span class="coin-name">Binance Coin</span>
+                        <span class="coin-symbol">BNB</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-main">
+                        <span class="coin-price" id="bnb-price">Yükleniyor...</span>
+                        <span class="price-change" id="bnb-change">%0.00</span>
+                    </div>
+                    <div class="price-details">
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Yüksek</span>
+                            <span class="detail-value" id="bnb-high">$0.00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Düşük</span>
+                            <span class="detail-value" id="bnb-low">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="coin-header">
+                    <img src="https://assets.coingecko.com/coins/images/4128/large/solana.png" alt="Solana">
+                    <div class="coin-info">
+                        <span class="coin-name">Solana</span>
+                        <span class="coin-symbol">SOL</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-main">
+                        <span class="coin-price" id="sol-price">Yükleniyor...</span>
+                        <span class="price-change" id="sol-change">%0.00</span>
+                    </div>
+                    <div class="price-details">
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Yüksek</span>
+                            <span class="detail-value" id="sol-high">$0.00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Düşük</span>
+                            <span class="detail-value" id="sol-low">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="coin-header">
+                    <img src="https://assets.coingecko.com/coins/images/975/large/cardano.png" alt="Cardano">
+                    <div class="coin-info">
+                        <span class="coin-name">Cardano</span>
+                        <span class="coin-symbol">ADA</span>
+                    </div>
+                </div>
+                <div class="price-info">
+                    <div class="price-main">
+                        <span class="coin-price" id="ada-price">Yükleniyor...</span>
+                        <span class="price-change" id="ada-change">%0.00</span>
+                    </div>
+                    <div class="price-details">
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Yüksek</span>
+                            <span class="detail-value" id="ada-high">$0.00</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">24s En Düşük</span>
+                            <span class="detail-value" id="ada-low">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="crypto-footer">
+            <div class="last-update">
+                <i class="fas fa-sync-alt"></i>
+                Son Güncelleme: <span id="last-update-time">Yükleniyor...</span>
+            </div>
+            <div class="data-source">
+                <i class="fas fa-database"></i>
+                Veri Kaynağı: CoinGecko
+            </div>
+        </div>
+    </section>
+
+    <section id="basari-hikayeleri" class="success-stories">
+        <h2>Başarı Hikayeleri</h2>
+        <div class="stories-grid">
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Başarı Hikayesi">
+                <div class="story-content">
+                    <h3>Ahmet Y.</h3>
+                    <p class="story-title">Kripto Para Yatırımcısı</p>
+                    <p class="story-text">"KriptoPara Akademi sayesinde kripto para dünyasını keşfettim. 6 aylık eğitim sonrası portföyümü %150 büyüttüm."</p>
+                </div>
+            </div>
+            <div class="story-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Başarı Hikayesi">
+                <div class="story-content">
+                    <h3>Ayşe K.</h3>
+                    <p class="story-title">Borsa Yatırımcısı</p>
+                    <p class="story-text">"Teknik analiz eğitimi ile borsada daha bilinçli yatırımlar yapmaya başladım. Artık kendi stratejilerimi oluşturabiliyorum."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hakkimizda" class="about">
+        <h2>Hakkımızda</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>KriptoPara Akademi olarak, finans dünyasında başarılı olmak isteyen herkese kaliteli eğitim sunuyoruz. Deneyimli eğitmenlerimiz ve güncel içeriklerimizle yanınızdayız.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Uzman Eğitmenler</li>
+                    <li><i class="fas fa-check"></i> Güncel İçerikler</li>
+                    <li><i class="fas fa-check"></i> Pratik Uygulamalar</li>
+                    <li><i class="fas fa-check"></i> 7/24 Destek</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim" class="contact">
+        <h2>İletişim</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <input type="text" placeholder="Adınız" required>
+                <input type="email" placeholder="E-posta Adresiniz" required>
+                <input type="tel" placeholder="Telefon Numaranız">
+                <textarea placeholder="Mesajınız" required></textarea>
+                <button type="submit" class="submit-button">Gönder</button>
+            </form>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>İstanbul, Türkiye</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+90 555 123 4567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@kriptoparaakademi.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>KriptoPara Akademi</h3>
+                <p>Finans dünyasında başarıya giden yolda yanınızdayız.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Bağlantılar</h3>
+                <ul>
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#egitimler">Eğitimler</a></li>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Sosyal Medya</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 KriptoPara Akademi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
